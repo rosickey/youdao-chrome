@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>选项-快捷翻译(中英文)</title>
+<link rel="stylesheet" type="text/css" href="options_css_min.css">
+</head>
+<body>
+	<div id="content">
+		<div id="title">
+			<div>
+				选项-快捷翻译(中英文)<br />——支持页内翻译
+			</div>
+		</div>
+		<form name="options_form" action="">
+			<div class="option_row">
+				<div class="option_name">中文简繁:</div>
+				<div class="option_value">
+					<div class="option_value_primary">
+						<select id="language_selector">
+							<option value="zh-CN">简体中文</option>
+							<option value="zh-TW">繁体中文</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="option_row">
+				<div class="option_name">单词翻译:</div>
+				<div class="option_value">
+					<div class="option_value_primary">
+						<input type="checkbox" name="popup_dblclick_checkbox"
+							id="popup_dblclick_checkbox"> <label
+							for="popup_dblclick_checkbox"> 双击单词时弹出翻译 </label>
+					</div>
+					<div class="option_value_secondary">
+						<span id="popup_dblclick_text">附加键:</span> <select
+							name="popup_dblclick_key" id="popup_dblclick_key">
+							<option value="none">无</option>
+							<option value="ctrl" id="popup_dblclick_key_ctrl">Ctrl</option>
+							<option value="alt">Alt</option>
+							<option value="shift">Shift</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="option_row">
+				<div class="option_name">划词翻译:</div>
+				<div class="option_value">
+					<div class="option_value_primary">
+						<input type="checkbox" name="popup_select_checkbox"
+							id="popup_select_checkbox"> <label
+							for="popup_select_checkbox"> 选中文本时弹出翻译 </label>
+					</div>
+					<div class="option_value_secondary">
+						<span id="popup_select_text">附加键:</span> <select
+							name="popup_select_key" id="popup_select_key">
+							<option value="none">无</option>
+							<option value="ctrl" id="popup_select_key_ctrl">Ctrl</option>
+							<option value="alt">Alt</option>
+							<option value="shift">Shift</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="buttons">
+				<button id="save_button">保存</button>
+				<button id="reset_button">重置</button>
+				<button id="close_button">关闭</button>
+				<span id="save_status">保存成功</span>
+			</div>
+		</form>
+	</div>
+	<script type="text/javascript" src="options_js_min.js"></script>
+</body>
+</html>

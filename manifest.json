@@ -1,0 +1,26 @@
+{
+   "background": {
+      "page": "background.html"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "css": [ "content_css_min.css" ],
+      "js": [ "content_js_min.js" ],
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_start"
+   } ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval' https://ssl.google-analytics.com https://clients5.google.com https://apis.google.com https://cdnjs.cloudflare.com; object-src 'self'",
+   "description": "为选择文本的右键菜单增加翻译,支持页内划词翻译",
+   "icons": {
+      "128": "gt.jpg",
+      "16": "gt.png",
+      "48": "gt48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC2qydqq+jp3c8RAzQ0AZcPK8jqzgeMVYhts53ZYWHBiBJq1haGnAIDDTc5MpGF9Tm3xO118iusqAURH14Y5ERhfw8/tAmDsC9h8xcmnbA9nsrPXfnI+pwD9ypQK9MCunjnVt2JVgpYn70DBzWO93FOdxm8gZFq1WtECTyCL918cQIDAQAB",
+   "manifest_version": 2,
+   "name": "Youdao",
+   "options_page": "options.html",
+   "permissions": [ "contextMenus", "tabs", "*://*/*", "webRequest", "webRequestBlocking" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.0.1"
+}
