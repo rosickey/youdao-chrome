@@ -1,14 +1,15 @@
 {
    "background": {
-      "page": "background.html"
+	 "service_worker": "background.js"
    },
-   "content_scripts": [ {
-      "all_frames": true,
-      "css": [ "content_css_min.css" ],
-      "js": [ "content_js_min.js" ],
-      "matches": [ "\u003Call_urls>" ],
-      "run_at": "document_start"
-   } ],
+   "content_scripts": [
+     {
+       "matches": ["<all_urls>"],
+       "js": ["content_js_min.js"],
+       "css": ["content_css_min.css"],
+       "run_at": "document_idle"
+     }
+   ],
    /*"content_security_policy": "script-src 'self' 'unsafe-eval' https://ssl.google-analytics.com https://clients5.google.com https://apis.google.com https://cdnjs.cloudflare.com; object-src 'self'",*/
    "description": "为选择文本的右键菜单增加翻译,支持页内划词翻译",
    "icons": {
@@ -20,7 +21,7 @@
    "manifest_version": 3,
    "name": "Youdao",
    "options_page": "options.html",
-   "permissions": [ "contextMenus", "tabs", "*://*/*", "webRequest", "webRequestBlocking" ],
+   "permissions": ["contextMenus", "tabs", "webRequest"],
    "update_url": "https://clients2.google.com/service/update2/crx",
    "version": "3.0.1"
 }
