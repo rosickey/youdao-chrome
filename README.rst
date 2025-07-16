@@ -23,7 +23,9 @@
 *************
 
 **It is very simple** ::
+
     直接下载，在chrome管理扩展程序里，打开开发者模式，加载未打包的扩展程序。
+	
     You can download and install here:
 
     .. _link https://addons.mozilla.org/en-US/firefox/addon/youdao-translation/
